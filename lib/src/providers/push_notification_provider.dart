@@ -8,7 +8,7 @@ class PushNotificationProvider {
   final FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
   final _streamMessageController = StreamController<String>.broadcast();
   Stream<String> get streamMessage => _streamMessageController.stream;
-  
+
   
 
   initNotification() async{
@@ -48,7 +48,7 @@ class PushNotificationProvider {
   Future<dynamic> onMessage(Map<String,dynamic> message)async{
     print('=====onMessage======');
     //print('message $message');
-    final argument = message['data']['food'];
+    final argument = message['data']['food']??'no-data';
     _streamMessageController.sink.add(argument);
     //print('argument: $argument');
   }
@@ -56,7 +56,7 @@ class PushNotificationProvider {
   Future<dynamic> onLaunch(Map<String,dynamic> message)async{
     print('=====onLaunch======');
     //print('message $message');
-    final argument = message['data']['food'];
+    final argument = message['data']['food']??'no-data';
     _streamMessageController.sink.add(argument);
     //print('argument: $argument');
   }
@@ -64,7 +64,7 @@ class PushNotificationProvider {
   Future<dynamic> onResume(Map<String,dynamic> message)async{
     print('=====onResume======');
     //print('message $message');
-    final argument = message['data']['food'];
+    final argument = message['data']['food']??'no-data';
     _streamMessageController.sink.add(argument);
     //print('argument: $argument');
   }

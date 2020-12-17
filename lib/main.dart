@@ -16,16 +16,19 @@ _MyAppState createState()=>_MyAppState();
 
 
 class _MyAppState extends State<MyApp>{
- 
+  
+  final GlobalKey<NavigatorState> navigatorKey = new GlobalKey();
+  
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+
     final pushProvider= new PushNotificationProvider();
     pushProvider.initNotification();
-
-    pushProvider.streamMessage.listen((argument) {
-      print('Argument from main: $argument');
+    pushProvider.streamMessage.listen((data) {
+      print('Argument from main: $data');   
+      navigatorKey.currentState.pushNamed('home', arguments: data);
     });
 
   }
@@ -35,10 +38,11 @@ class _MyAppState extends State<MyApp>{
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Push notification',
+      navigatorKey: navigatorKey,
       initialRoute: 'home',
       //home: HomePage()
       routes: {
-        'home': (BuildContext c) => HomePage(),        
+        'home': (BuildContext c) => HomePage(),
       },
     ); 
   }
