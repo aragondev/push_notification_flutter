@@ -34,7 +34,7 @@ class PushNotificationProvider {
       Map<String, dynamic> message) async {
     if (message.containsKey('data')) {
       // Handle data message
-      final dynamic data = message['data'];
+      final dynamic data = message['data']??'no-data';
     }
 
     if (message.containsKey('notification')) {

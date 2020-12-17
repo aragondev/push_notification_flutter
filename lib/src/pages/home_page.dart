@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     //final arg = ModalRoute.of(context).settings.arguments;
 
-    final arg = ModalRoute.of(context).settings.arguments;
+    final arg = ModalRoute.of(context).settings.arguments??'no-data';
 
 
     return Scaffold(
