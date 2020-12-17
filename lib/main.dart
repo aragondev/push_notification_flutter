@@ -42,7 +42,7 @@ class _MyAppState extends State<MyApp>{
       initialRoute: 'home',
       //home: HomePage()
       routes: {
-        'home': (BuildContext c) => HomePage(),
+        'home': (BuildContext c) => HomePage(),        
       },
     ); 
   }

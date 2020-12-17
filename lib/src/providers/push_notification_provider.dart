@@ -34,7 +34,7 @@ class PushNotificationProvider {
       Map<String, dynamic> message) async {
     if (message.containsKey('data')) {
       // Handle data message
-      final dynamic data = message['data']??'no-data';
+      final dynamic data = message['data'];
     }
 
     if (message.containsKey('notification')) {
@@ -48,7 +48,7 @@ class PushNotificationProvider {
   Future<dynamic> onMessage(Map<String,dynamic> message)async{
     print('=====onMessage======');
     //print('message $message');
-    final argument = message['data']['food']??'no-data';
+    final argument = message['data']['name'];
     _streamMessageController.sink.add(argument);
     //print('argument: $argument');
   }
@@ -56,7 +56,7 @@ class PushNotificationProvider {
   Future<dynamic> onLaunch(Map<String,dynamic> message)async{
     print('=====onLaunch======');
     //print('message $message');
-    final argument = message['data']['food']??'no-data';
+    final argument = message['data']['name'];
     _streamMessageController.sink.add(argument);
     //print('argument: $argument');
   }
@@ -64,7 +64,7 @@ class PushNotificationProvider {
   Future<dynamic> onResume(Map<String,dynamic> message)async{
     print('=====onResume======');
     //print('message $message');
-    final argument = message['data']['food']??'no-data';
+    final argument = message['data']['name'];
     _streamMessageController.sink.add(argument);
     //print('argument: $argument');
   }
