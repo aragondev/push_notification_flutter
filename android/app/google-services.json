@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "965111404879",
+    "project_id": "push-notification-flutte-825cd",
+    "storage_bucket": "push-notification-flutte-825cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965111404879:android:6196c035eed2bd20984d3a",
+        "android_client_info": {
+          "package_name": "com.example.push_notification_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965111404879-f3idho7s0nf5p7bmgr1npflnhrfs11fm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.push_notification_app",
+            "certificate_hash": "dc146b4e0eec4afe7a0dfe279cf340ada4d67f3c"
+          }
+        },
+        {
+          "client_id": "965111404879-oeqs5t6sv2eqdktjv4qoi1i6mgrpm9r7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr4et7jtc9S2v2Z4-jMDRkR3BxYnJK3a0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965111404879-oeqs5t6sv2eqdktjv4qoi1i6mgrpm9r7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
